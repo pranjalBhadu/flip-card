@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cabin', sans-serif;
+    background-image: linear-gradient(60deg, #66757F, #292F33);
+}
+.card-wrap{
+    height: 12.65rem;
+    width: 27.15rem;
+    border-radius: 0.37rem;
+    perspective: 1000px;
+}
+.card{
+    height: inherit;
+    width: inherit;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d; 
+}
+.card-front,.card-back{
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    backface-visibility: hidden;
+    border-radius: 0.37rem;
+}
+.card-front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1DA1F2;
+}
+.card-back{
+    background-color: #CCD6DD;
+    transform: rotateY(180deg);
+}
+.card-back .user img{
+    width: 35%;
+    float: left;
+    border-radius: 50%;
+    margin: 1.6rem 1.1rem;
+    box-shadow: 3px 3px 10px #66757F;
+}
+.card-wrap:hover .card{
+    transform: rotateY(180deg);
+}
+.user-info{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #292F33;
+    padding: 1.6rem 1.1rem;
+}
+.user-info .username{
+    font-size: 1.3rem;
+}
+.user-info .user-bio{
+    font-size: 1rem;
+    margin: 1.1rem 0;
+}
+.follow-btn{
+    padding: 0.5rem;
+    width: 9rem;
+    color: #E1E8ED;
+    background-color: #292F33;
+    border: 0;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.0625rem;
+    border-radius: 0.27rem;
+    margin: 0 auto;
+}
+.follow-btn:hover{
+    cursor: pointer;
+    background-color: #1DA1F2;
+    color: white;
+}
